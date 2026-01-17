@@ -13,9 +13,6 @@ AB_OTA_PARTITIONS += \
     system_ext \
     vendor 
 
-  #filesystem
-TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
 
 PRODUCT_PACKAGES += \
     update_engine \
@@ -78,7 +75,7 @@ PRODUCT_ENFORCE_VINTF_MANIFEST := true
 
 # Recovery init
 PRODUCT_PACKAGES += \
-    init.recovery.mt6886.rc
+    init.recovery.mt6878.rc
 
 # Filesystem table
 PRODUCT_PACKAGES += \
