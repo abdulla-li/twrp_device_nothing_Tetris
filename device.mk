@@ -1,7 +1,7 @@
 DEVICE_PATH := device/nothing/Tetris
 
 # API
-PRODUCT_SHIPPING_API_LEVEL := 32
+PRODUCT_SHIPPING_API_LEVEL := 34
 PRODUCT_TARGET_VNDK_VERSION := 34
 
 # A/B
@@ -12,7 +12,11 @@ AB_OTA_PARTITIONS += \
     system \
     system_ext \
     vendor 
-  
+
+  #filesystem
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+
 PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
