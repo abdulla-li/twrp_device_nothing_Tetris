@@ -11,6 +11,14 @@
 /boot               emmc      /dev/block/by-name/boot                                               flags=display="boot";slotselect;backup=1;flashimg=1
 /init_boot          emmc      /dev/block/by-name/init_boot                                          flags=display="init_boot";slotselect;backup=1;flashimg=1
 /vendor_boot        emmc      /dev/block/by-name/vendor_boot                                        flags=display="vendor_boot";slotselect;backup=1;flashimg=1
+# Logical
+/system_dlkm        erofs     system_dlkm                                                           flags=display=System_DLKM;logical;slotselect
+/vendor_dlkm        erofs     vendor_dlkm                                                           flags=display="Vendor DLKM";logical;slotselect
+/system_root        ext4      system                                                                flags=display=System;logical;slotselect
+/system_ext         ext4      system_ext                                                            flags=display=System_EXT;logical;slotselect
+/system_ext         erofs     system_ext                                                            flags=display=System_EXT;logical;slotselect
+/system_root        erofs     system                                                                flags=display=System;logical;slotselect
+# boot
 /dtbo               emmc      /dev/block/by-name/dtbo                                               flags=display="dtbo";slotselect;backup=1;flashimg=1
 /vbmeta             emmc      /dev/block/by-name/vbmeta                                             flags=display="vbmeta";slotselect;backup=1;flashimg=1
 /vbmeta_system      emmc      /dev/block/by-name/vbmeta_system                                      flags=display="vbmeta_system";slotselect;backup=1;flashimg=1

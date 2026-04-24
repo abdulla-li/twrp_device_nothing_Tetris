@@ -5,5 +5,10 @@ on init
     setprop sys.usb.controller "11201000.usb0"
     setprop sys.usb.ffs.aio_compat 1
 
+on boot
+    insmod /vendor/lib/modules/bootinfo.ko
+    insmod /vendor/lib/modules/touchpanel_event_notify.ko
+    insmod /vendor/lib/modules/focaltech_tp.ko
+
 on fs && property:ro.debuggable=0
     start adbd
